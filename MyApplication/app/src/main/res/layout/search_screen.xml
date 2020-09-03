@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    >
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/search"
+        android:layout_below="@+id/titlebar1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/searchbg">
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/radioURL"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/rbtn_selector1"
+                android:button="@null"
+
+                android:gravity="center"
+                android:onClick="searchurl"
+                android:text="SEARCH BY URL"
+                android:textColor="@drawable/searchselect1"
+                android:padding="5dp"
+
+                />
+
+
+
+            <RadioButton
+                android:id="@+id/radioWords"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/rbtn_selector1"
+                android:button="@null"
+                android:gravity="center"
+                android:checked="true"
+
+                android:padding="5dp"
+                android:onClick="searchwords"
+                android:text="SEARCH BY WORDS"
+                android:textColor="@drawable/searchselect1"
+
+                />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchbox"
+        android:layout_below="@+id/search"
+        android:layout_gravity="center_horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText1"
+            android:layout_gravity="center_horizontal"
+            android:autoText="true"
+
+            android:editable="true"
+
+            android:drawableRight="@drawable/search_icon"
+            android:hint="Paste Youtube Video URL"
+            />
+<!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="search"-->
+    <!--android:id="@+id/bsearch"/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/searchbox1"
+        android:layout_below="@+id/searchbox"
+        android:background="@drawable/ads"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Recommended"
+            android:id="@+id/textView1"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/searchitems"
+        android:layout_below="@+id/searchbox1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="55dp"
+        android:layout_gravity="center_horizontal">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#b5b5b5"
+            android:layout_gravity="center_horizontal"
+
+            android:dividerHeight="1dp"
+            />
+        <!--android:listSelector="@drawable/list_selector"-->
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ads"
+        android:id="@id/adsbar"
+        android:gravity="bottom"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+
+        android:layout_gravity="bottom">
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/horizontal_dropdown_icon_menu_items"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/titlebar1"-->
+
+        <!--android:weightSum="3"-->
+        <!--android:background="@drawable/menu_bg"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="invisible">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:onClick="settingsIt"-->
+            <!--android:src="@drawable/settingss"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_gravity="center"-->
+            <!--/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:onClick="shareIt"-->
+            <!--android:src="@drawable/share1"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--/>-->
+
+        <!--<ImageView-->
+
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:onClick="downloadIt"-->
+            <!--android:src="@drawable/downloadicon"-->
+
+            <!--android:layout_weight="1"-->
+            <!--android:layout_gravity="center"-->
+            <!--/>-->
+
+
+
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/titlebar1"
+        android:layout_height="50dp"
+        android:background="@drawable/header_bg">
+
+
+
+        <ImageView
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back"
+            android:id="@+id/menuicon"
+            android:onClick="back_click"
+
+            android:clickable="true" />
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+
+            android:clickable="true" />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

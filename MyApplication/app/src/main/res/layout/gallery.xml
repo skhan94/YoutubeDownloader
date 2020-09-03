@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="match_parent" >
+
+    <!--<GridView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/gridView"-->
+        <!--android:numColumns="2"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/titlebar"
+        android:layout_height="50dp"
+        android:background="@drawable/header_bg">
+
+
+
+        <ImageView
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back"
+            android:id="@+id/back1"
+            android:onClick="back_click"
+
+            android:clickable="true" />
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+
+            android:clickable="true" />
+
+
+
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridView"
+       android:layout_margin="15dp"
+      android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
+
+        android:numColumns="auto_fit"/>
+
+</LinearLayout>

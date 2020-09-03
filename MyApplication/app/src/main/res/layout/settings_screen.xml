@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/filemanager"
+        android:layout_below="@+id/titlebar"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/folder_icon"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Files Manager"
+            android:textSize="20dp"
+
+            android:layout_gravity="center_vertical"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/storage"
+        android:layout_below="@+id/filemanager"
+        android:orientation="horizontal"
+        android:background="@drawable/breadcrumb_bg"
+        >
+
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="/storage/"
+
+            android:layout_gravity="center_vertical"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio"
+        android:layout_below="@+id/storage"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        >
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/imageView"
+            android:layout_toStartOf="@+id/imageView">
+
+
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="   Device"
+                android:id="@+id/radioButtondevice"
+                android:drawableLeft="@drawable/mobile"
+                android:button="@null"
+                android:checked="true"
+                android:textSize="15dp"
+                android:drawableRight="@drawable/radio_selector"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/menubutton"
+                android:layout_toEndOf="@+id/menubutton" />
+
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="   SD Card"
+                android:textSize="15dp"
+                android:drawableRight="@drawable/radio_selector"
+                android:id="@+id/radioButtonsdcard"
+                android:drawableLeft="@drawable/cd_card"
+                android:button="@null"
+                android:layout_marginRight="20dp"
+                android:onClick="sdcard_click"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/menubutton"
+                android:layout_toEndOf="@+id/menubutton" />
+
+
+
+        </RadioGroup>
+<ImageView
+    android:layout_width="150dp"
+    android:layout_height="70dp"
+    android:src="@drawable/open_folder_btn"
+    android:layout_gravity="center"
+    android:id="@+id/opengallery"
+    android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+
+  <!--  <LinearLayout
+        android:id="@+id/horizontal_dropdown_icon_menu_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar"
+        android:weightSum="3"
+        android:background="@drawable/menu_bg"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:onClick="settingsIt"
+            android:src="@drawable/settingss"
+
+            android:layout_gravity="center"
+
+            android:layout_weight="1"
+
+
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:onClick="shareIt"
+            android:src="@drawable/share1"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="downloadIt"
+            android:src="@drawable/downloadicon"
+
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            />
+
+
+
+    </LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/titlebar"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header_bg">
+
+
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:id="@+id/menuicon"
+
+
+            android:onClick="back_click"
+            android:clickable="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:clickable="true"/>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ads"
+        android:id="@id/adsbar"
+        android:gravity="bottom"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+
+        android:layout_gravity="bottom">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+
+
+
+    </RelativeLayout>
+<!--    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>-->
+ <!--   <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+-->
+
+</RelativeLayout>

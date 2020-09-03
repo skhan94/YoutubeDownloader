@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+  >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/welcometext"
+        android:orientation="vertical"
+        android:layout_below="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textView2"-->
+            <!--android:text="Welcome"-->
+            <!--android:textColor="#cb171d"-->
+                        <!--android:textSize="23dp"-->
+            <!--android:layout_margin="15dp"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:text="Search and Download your Favorite Videos for Free!"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="normal"
+          android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+
+           />
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_margin="15dp">
+
+            <RadioButton
+                android:id="@+id/radioURL"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="SEARCH BY URL"
+                android:onClick="searchurl"
+                android:textColor="@drawable/searchselect" />
+
+
+
+            <RadioButton
+                android:id="@+id/radioWords"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:onClick="searchwords"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="SEARCH BY WORDS"
+                android:textColor="@drawable/searchselect" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/search"
+        android:layout_below="@+id/welcometext"
+        android:layout_height="wrap_content">
+
+
+
+        <EditText
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/editText1"
+            android:layout_gravity="center_horizontal"
+            android:autoText="true"
+            android:editable="true"
+            android:drawableRight="@drawable/search"
+            android:hint="Enter a keyword" />
+
+
+      <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEARCH"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+
+            android:clickable="true"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+
+          android:height="33dp"
+            android:background="#cb171d"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/horizontal_dropdown_icon_menu_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar"
+        android:weightSum="3"
+        android:background="@drawable/menu_bg"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:onClick="settingsIt"
+            android:src="@drawable/settingss"
+
+            android:layout_gravity="center"
+
+            android:layout_weight="1"
+
+
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:onClick="shareIt"
+            android:src="@drawable/share1"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="downloadIt"
+            android:src="@drawable/downloadicon"
+
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/titlebar"
+        android:layout_height="50dp"
+        android:background="@drawable/header_bg">
+
+
+
+        <ImageView
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu"
+            android:id="@+id/menuicon"
+            android:onClick="horizontalDropDownIconMenu"
+
+            android:clickable="true" />
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+
+            android:clickable="true" />
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/adsbar"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+           android:background="@drawable/ads"
+        android:layout_gravity="bottom">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

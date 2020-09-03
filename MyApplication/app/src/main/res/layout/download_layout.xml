@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_below="@+id/titlebar1"-->
+        <!--android:layout_height="wrap_content">-->
+        <TextView
+            android:layout_below="@+id/titlebar1"
+            android:id="@+id/videodownloadname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Video Download"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            />
+
+
+      <!-- -->
+    <!--</LinearLayout>-->
+
+    <ListView
+        android:id="@+id/downloadListView"
+        android:layout_below="@+id/videodownloadname"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:layout_marginBottom="55dp"
+        android:choiceMode="singleChoice"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    </ListView>
+
+<!--
+    <LinearLayout
+        android:id="@+id/horizontal_dropdown_icon_menu_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar1"
+
+
+        android:weightSum="3"
+        android:background="@drawable/menu_bg"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:onClick="settingsIt"
+            android:src="@drawable/settingss"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+
+
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:onClick="shareIt"
+            android:src="@drawable/share1"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+
+
+
+
+            />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="downloadIt"
+            android:src="@drawable/downloadicon"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            />
+
+
+
+    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/titlebar1"
+        android:layout_height="50dp"
+        android:background="@drawable/header_bg">
+
+
+
+        <ImageView
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back"
+            android:id="@+id/menuicon"
+            android:onClick="back_click"
+
+            android:clickable="true" />
+
+
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+
+            android:clickable="true" />
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ads"
+
+        android:gravity="bottom"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+
+        android:layout_gravity="bottom">
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

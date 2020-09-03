@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/download_icon2"
+        android:id="@+id/imageView"
+      />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Textgggg"
+        android:textSize="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/textView1"
+
+      />
+
+
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/unckeck"-->
+        <!--android:layout_gravity="end"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_weight="2"-->
+        <!--android:layout_marginTop="6dp"-->
+
+
+        <!--android:id="@+id/imageView2"/>-->
+
+
+        <!--/>-->
+
+
+
+
+
+
+
+
+    <!--android:drawableLeft="@drawable/video_icon"-->
+    <!--android:button="@null"-->
+    <!--android:checked="true"-->
+    <!--android:drawableRight="@drawable/radio_selector"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_toRightOf="@+id/menubutton"-->
+    <!--android:layout_toEndOf="@+id/menubutton" />-->
+    />
+
+</LinearLayout>
